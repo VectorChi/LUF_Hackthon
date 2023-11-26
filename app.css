@@ -1,0 +1,372 @@
+:root {
+  --grey50: #656266;
+  --grey100: #616161;
+  --grey200: #303030;
+  --grey300: #1a1a1a;
+  --font_light: #e3e3e3;
+  --font_mid: #616161;
+  --font_dark: #475467;
+  --stroke-light: #ebebeb;
+  --stroke-mid: #e1e1e1;
+  --stroke-dark: #616161;
+  --state-light: #f0f0f0;
+  --state-dark: #005bd3;
+}
+* {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* layouts, utils */
+.flex-col,
+.flex-row {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+  align-items: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+
+nav {
+  padding: 1rem;
+  justify-content: space-between;
+  max-width: 100vw;
+  background-color: var(--grey300);
+}
+.search-bar {
+  padding: 0.5rem;
+  gap: 0.4rem;
+  width: 30%;
+  border: 0.5px solid var(--stroke-dark);
+  border-radius: 0.5rem;
+  background-color: var(--grey200);
+  cursor: pointer;
+}
+.search-bar:hover {
+  border: 0.5px solid var(--stroke-light);
+}
+
+.search-input,
+.search-input:focus {
+  border: none;
+  background-color: var(--grey200);
+  outline: none;
+  color: #ffff;
+}
+.search-input::placeholder {
+  color: var(--grey100);
+}
+.search-icon,
+.bell-icon,
+.filter,
+.check,
+.check-mark,
+.cancel_icon,
+.dashed-circle {
+  filter: invert();
+}
+
+.right-hand {
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+}
+.notification_icon {
+  padding: 0.7rem;
+  background-color: var(--grey200);
+  border-radius: 0.7rem;
+  margin-right: 0.8rem;
+  cursor: pointer;
+  position: relative;
+}
+.notification_icon:hover,
+.name_pill:hover {
+  background-color: var(--grey100);
+}
+
+.name_pill {
+  padding: 0.5rem 0.8rem;
+  gap: 1.5rem;
+  justify-content: space-between;
+  background-color: var(--grey200);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 0.8rem;
+  line-height: 130%;
+  font-weight: 500;
+  color: var(--font_light);
+}
+.name-img {
+  background-color: #36fba1;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  outline: 1px solid var(--stroke-mid);
+  width: fit-content;
+  right: 1rem;
+  top: 5.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.divider {
+  border: 0.8px solid var(--stroke-mid);
+}
+
+/* Notification dropdown */
+.alert_dropdown {
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card-header {
+  justify-content: space-between;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grey200);
+}
+.card-icons {
+  gap: 1rem;
+}
+.empty-state {
+  background-color: #f1f1f1;
+  padding: 1rem;
+}
+.info {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--grey100);
+}
+
+/* Profile dropdown */
+.profile_dropdown {
+  width: 18%;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  gap: 0.6rem;
+}
+.card-link,
+.name-email {
+  padding: 0.45rem;
+}
+.card-link {
+  cursor: pointer;
+  color: var(--grey200);
+}
+.card-link:hover {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 0.4rem;
+}
+.name-store-wrapper,
+.middle-wrapper,
+.profile-settings {
+  width: 95%;
+  margin: auto;
+}
+
+.name-store-wrapper {
+  gap: 0.6rem;
+}
+.card-name {
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 0.3rem 0.4rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.card-name-info {
+  gap: 0.5rem;
+}
+.pro-mail {
+  font-size: 0.85rem;
+  color: var(--grey100);
+  font-weight: 400;
+}
+
+/* main dashcontent */
+.dashboard-content {
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 3%;
+  gap: 1rem;
+}
+.choose_plan {
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--grey300);
+  border: none;
+  border-radius: 0.5rem;
+}
+.plan-dets {
+  font-size: 1rem;
+  color: var(--font_light);
+  font-weight: 400;
+}
+.plan_cta {
+  gap: 1rem;
+}
+.cancel_icon {
+  cursor: pointer;
+}
+.plan_btn {
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #ffffff;
+}
+
+.setup_wrapper {
+  padding: 1rem 0rem;
+  border: 1px solid var(--stroke-mid);
+  border-radius: 1.1rem;
+  gap: 2rem;
+}
+
+.top_section {
+  width: 95%;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.progress_bar {
+  position: relative;
+  background-color: var(--stroke-mid);
+  width: 10rem;
+}
+.meter {
+  position: relative;
+  background-color: var(--grey300);
+  width: 0%;
+}
+
+.progress_bar,
+.meter {
+  height: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.section-header-content {
+  justify-content: space-between;
+}
+.section-header {
+  gap: 0.3rem;
+}
+.open,
+.close {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+}
+.open:hover,
+.close:hover {
+  background-color: #f1f1f1;
+}
+
+.setup-header,
+.setup-subtitle,
+.progress_count {
+  color: var(--grey200);
+}
+.setup-header {
+  font-weight: 600;
+}
+.setup_title {
+  font-weight: 500;
+  cursor: pointer;
+}
+.setup-subtitle {
+  font-weight: 300;
+}
+
+.setup_list_wrapper {
+  width: 98%;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.setup_list {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+}
+
+.dashed-circle,
+.checked {
+  width: 24px;
+  height: 24px;
+}
+.main_dets {
+  margin-top: 0.18rem;
+  gap: 0.4rem;
+}
+
+.list_details_wrapper {
+  gap: 1rem;
+}
+.list_dets {
+  font-size: 0.9rem;
+  width: 80%;
+  color: var(--font_mid);
+  line-height: 140%;
+}
+.list_cta {
+  gap: 1rem;
+}
+
+.pry_btn {
+  color: var(--font_light);
+  border-top: 1px solid var(--stroke-dark, rgba(255, 255, 255, 0.1));
+  border-right: 1px solid var(--stroke-dark, rgba(255, 255, 255, 0.1));
+  border-left: 1px solid var(--stroke-dark, rgba(255, 255, 255, 0.1));
+  background: #404040;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333,
+    0px 2px 0px 0px #000;
+}
+.pry_btn:hover {
+  background-color: var(--grey300);
+}
+
+.pry_btn,
+.sec_btn {
+  padding: 0.5rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+}
+.sec_btn {
+  border: none;
+  background-color: #f3f3f3;
+  color: var(--grey300);
+}
+.sec_btn:hover {
+  background-color: var(--stroke-mid);
+}
+
+.active_list {
+  background-color: #f3f3f3;
+}
+.progress_wrapper {
+  gap: 0.8rem;
+}

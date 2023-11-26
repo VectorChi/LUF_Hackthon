@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/app.css">
+
+</head>
+
+<body>
+    <nav class="flex-row">
+        <img class="logo" src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg" alt="logo">
+        <div class="flex-row search-bar">
+            <img class="search-icon" src="https://crushingit.tech/hackathon-assets/icon-search.svg" alt="search_icon">
+            <input class="search-input" type="text" placeholder="Search">
+        </div>
+        <div class="flex-row right-hand">
+            <div class="flex-row notification_icon">
+                <img class="bell-icon" src="https://crushingit.tech/hackathon-assets/icon-bell.svg" alt="bell">
+
+
+            </div>
+            <div class="flex-row name_pill">
+                <p class="name">Adimchi Oka</p>
+                <div class="flex-row name-img">
+                    <p class="initials">AO</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification dropdown -->
+        <div class="flex-col alert_dropdown dropdown hidden">
+            <div class="flex-row card-header">
+                <p class="card-title">Alert</p>
+                <div class="flex-row card-icons">
+                    <img class="filter" src="https://crushingit.tech/hackathon-assets/icon-filter.svg" alt="filter">
+                    <img class="check" src="https://crushingit.tech/hackathon-assets/icon-check-empty-circle.svg"
+                        alt="check">
+                </div>
+            </div>
+
+            <div class="empty-state">
+                <p class="info">Alerts about your store and account will show here</p>
+            </div>
+
+        </div>
+
+        <!-- Profile Dropdown -->
+        <div class="flex-col profile_dropdown dropdown hidden">
+            <div class=" flex-col name-store-wrapper">
+                <div class="flex-row card-name">
+                    <div class="flex-row card-name-info">
+                        <div class="flex-row name-img">
+                            <p class="initials">AO</p>
+                        </div>
+                        <p class="profile-name">Adimchi Oka</p>
+                    </div>
+                    <img class="down" src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg" alt="check">
+                </div>
+                <div class="flex-row card-link stores">
+                    <img src="https://crushingit.tech/hackathon-assets/icon-store.svg" alt="store">
+                    <p class="stores">All stores</p>
+                </div>
+            </div>
+            <hr class="divider">
+
+            <div class="flex-col middle-wrapper">
+                <div class="flex-row card-link">
+                    <p class="link-name">Help Center</p>
+                </div>
+                <div class="flex-row card-link">
+                    <p class="link-name">Changelog</p>
+                </div>
+                <div class="flex-row card-link">
+                    <p class="link-name">Community forums</p>
+                </div>
+                <div class="flex-row card-link">
+                    <p class="link-name">Hire a Shopify Partner</p>
+                </div>
+                <div class="flex-row card-link">
+                    <p class="link-name">Keyboard shortcuts</p>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="flex-col profile-settings">
+                <div class="flex-col name-email">
+                    <p class="pro-name">Adimchi Oka</p>
+                    <p class="pro-mail">adimchioka@gmail.com</p>
+                </div>
+                <div class="flex-row card-link">
+                    <p class="link-name">Manage account</p>
+                </div>
+                <div class="flex-row card-link">
+                    <p class="link-name">Logout</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </nav>
+
+    <section class="flex-col dashboard-content">
+        <div class=" flex-row choose_plan">
+            <p class="plan-dets">Extend your trial for $1/month for 3 months on select plans.</p>
+
+            <div class="flex-row plan_cta">
+                <button class="plan_btn">Select a plan</button>
+                <img class="cancel_icon" src="https://crushingit.tech/hackathon-assets/icon-cross.svg" alt="cancel">
+            </div>
+
+        </div>
+
+        <div class="flex-col setup_wrapper">
+            <div class=" flex-col top_section">
+                <div class="flex-row section-header-content">
+                    <div class="flex-col section-header">
+                        <p class="setup-header">Setup Guide</p>
+                        <p class="setup-subtitle">Use this personalized guide to get your store up and running.</p>
+                    </div>
+
+                    <div class=" flex-row toggle_section">
+                        <div class="flex-row open hidden">
+                            <img src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg" alt="open">
+                        </div>
+                        <div class="flex-row close">
+                            <img src="https://crushingit.tech/hackathon-assets/icon-arrow-up.svg" alt="close">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress bar -->
+                <div class="progress_wrapper flex-row">
+                    <div class="progress_count"></div>
+                    <div class="progress_bar">
+                        <div class="meter"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- setup list -->
+            <div class="flex-col setup_list_wrapper">
+                <!-- First Item -->
+                <div class="setup_list active_list">
+
+                    <div class="flex-row icons">
+                        <img class="dashed-circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                            alt="dashed-circle">
+                        <img class="checked hidden"
+                            src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg" alt="checked">
+                    </div>
+
+                    <div class="flex-col main_dets online_store">
+
+                        <p class="setup_title">Customize your online store</p>
+
+                        <div class="flex-row list_content">
+                            <div class="flex-col list_details_wrapper">
+                                <p class="list_dets">Choose a theme and add your logo, colors, and images to reflect
+                                    your
+                                    brand. <span class="blue_highlight">Learn more</span></p>
+                                <div class=" flex-row list_cta">
+                                    <button class="pry_btn">Customize theme</button>
+                                    <button class="sec_btn">Import Button</button>
+                                </div>
+                            </div>
+                            <img src="https://crushingit.tech/hackathon-assets/customise-store.png"
+                                alt="customise-store">
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- Second Item -->
+                <div class="setup_list">
+
+                    <div class="flex-row icons">
+                        <img class="dashed-circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                            alt="dashed-circle">
+                        <img class="checked hidden"
+                            src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg" alt="checked">
+                    </div>
+
+                    <div class="flex-col main_dets">
+
+                        <p class="setup_title">Add your first product</p>
+
+                        <div class="flex-row list_content hidden">
+                            <div class="flex-col list_details_wrapper">
+                                <p class="list_dets">Write a description, add photos, and set pricing for the products
+                                    you plan to sell. <span class="blue_highlight">Learn more</span></p>
+                                <div class=" flex-row list_cta">
+                                    <button class="pry_btn">Add Product</button>
+                                    <button class="sec_btn">Import Product</button>
+                                </div>
+                            </div>
+                            <img src="https://crushingit.tech/hackathon-assets/product.png" alt="domain">
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- Third Item -->
+                <div class="setup_list">
+
+                    <div class="flex-row icons">
+                        <img class="dashed-circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                            alt="dashed-circle">
+                        <img class="checked hidden"
+                            src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg" alt="checked">
+                    </div>
+
+                    <div class="flex-col main_dets">
+
+                        <p class="setup_title">Add a custom domain</p>
+
+                        <div class="flex-row list_content hidden">
+                            <div class="flex-col list_details_wrapper">
+                                <p class="list_dets">Your current domain is 222219.myshopify.com but you can add a
+                                    custom domain to help customers find your online store. <span
+                                        class="blue_highlight">Learn more</span></p>
+                                <div class=" flex-row list_cta">
+                                    <button class="pry_btn">Add Domain</button>
+
+                                </div>
+                            </div>
+                            <img src="https://crushingit.tech/hackathon-assets/website.png" alt="domain">
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- Fourth Item -->
+                <div class="setup_list">
+
+                    <div class="flex-row icons">
+                        <img class="dashed-circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                            alt="dashed-circle">
+                        <img class="checked hidden"
+                            src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg" alt="checked">
+                    </div>
+
+                    <div class="flex-col main_dets">
+
+                        <p class="setup_title">Name your store</p>
+
+                        <div class="flex-row list_content hidden">
+                            <div class="flex-col list_details_wrapper">
+                                <p class="list_dets">Your temporary store name is currently Davii collections. The store
+                                    name appears in your admin and your online store. <span class="blue_highlight">Learn
+                                        more</span></p>
+                                <div class=" flex-row list_cta">
+                                    <button class="pry_btn">Name store</button>
+
+                                </div>
+                            </div>
+                            <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="name-a-store">
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- Fifth Item -->
+                <div class="setup_list">
+
+                    <div class="flex-row icons">
+                        <img class="dashed-circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                            alt="dashed-circle">
+                        <img class="checked hidden"
+                            src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg" alt="checked">
+                    </div>
+
+                    <div class="flex-col main_dets">
+
+                        <p class="setup_title">Set up a payment provider</p>
+
+                        <div class="flex-row list_content hidden">
+                            <div class="flex-col list_details_wrapper">
+                                <p class="list_dets">Choose a payment provider to start accepting payments. You’ll need
+                                    to create an account with the payment provider and
+                                    set it up with your Shopify store. <span class="blue_highlight">Learn
+                                        more</span></p>
+                                <div class=" flex-row list_cta">
+                                    <button class="pry_btn">Set up payment</button>
+
+                                </div>
+                            </div>
+                            <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="payment">
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="/app.js"></script>
+</body>
+
+</html>
