@@ -79,8 +79,6 @@ const getCheckedItems = () => {
   checkedItems = 5 - uncheckedItem.length;
 
   meterBar.style.width = `${checkedItems * 20}%`;
-  console.log(checkedItems);
-
   progress_count.innerHTML = `<p>${checkedItems}/5 completed</p>`;
 };
 window.onload = function () {
