@@ -235,6 +235,8 @@ nav {
   gap: 1rem;
 }
 .cancel_icon {
+  width: 24px;
+  height: 24px;
   cursor: pointer;
 }
 .plan_btn {
@@ -256,7 +258,13 @@ nav {
   margin: 0 auto;
   gap: 1rem;
 }
+.plan_x {
+  justify-content: space-between;
+}
 
+.sml_x {
+  display: none;
+}
 .progress_bar {
   position: relative;
   background-color: var(--stroke-mid);
@@ -420,6 +428,15 @@ nav {
     align-items: flex-start;
     gap: 1rem;
   }
+  .plan-dets {
+    width: 80%;
+  }
+  .big_x {
+    display: none;
+  }
+  .sml_x {
+    display: block;
+  }
 
   .setup_wrapper {
     border-radius: 0rem;
@@ -468,6 +485,18 @@ nav {
     align-items: flex-start;
     gap: 1rem;
   }
+  .plan_x {
+    width: 100%;
+  }
+  .plan-dets {
+    width: 80%;
+  }
+  .big_x {
+    display: none;
+  }
+  .sml_x {
+    display: block;
+  }
 
   .setup_wrapper {
     border-radius: 0rem;
@@ -498,9 +527,23 @@ nav {
   .profile_dropdown {
     width: 40%;
   }
+  .choose_plan {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 
   .dashboard-content {
     width: 80%;
+  }
+  .plan_x {
+    width: 100%;
+  }
+  .big_x {
+    display: none;
+  }
+  .sml_x {
+    display: block;
   }
 }
 @media (min-width: 961px) and (max-width: 1024px) {
@@ -527,6 +570,9 @@ nav {
 
   .dashboard-content {
     width: 80%;
+  }
+  .plan_x {
+    width: 100%;
   }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {

@@ -10,7 +10,7 @@ const meterBar = document.querySelector(".meter");
 const openItems = document.querySelector(".open");
 const closeItems = document.querySelector(".close");
 const setup_container = document.querySelector(".setup_list_wrapper");
-const cancelIcon = document.querySelector(".cancel_icon");
+const cancelIcon = document.querySelectorAll(".cancel_icon");
 
 // toggle notification
 alertIcon.addEventListener("click", (e) => {
@@ -32,8 +32,10 @@ profileIcon.addEventListener("click", (e) => {
   }
 });
 
-cancelIcon.addEventListener("click", (e) => {
-  cancelIcon.parentElement.parentElement.classList.add("hidden");
+cancelIcon.forEach((icon) => {
+  icon.addEventListener("click", (e) => {
+    icon.parentElement.parentElement.classList.add("hidden");
+  });
 });
 
 // Toggle active list
